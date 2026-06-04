@@ -1,0 +1,132 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f8f4;
+}
+body{
+    margin:0;
+    padding:0;
+    background-color:#f5f8f4;
+    font-family:Arial, sans-serif;
+}
+
+
+
+nav{
+    background-color:hsla(155, 43%, 18%, 0.9);
+    overflow:hidden;
+    position:sticky;
+    top:0;
+}
+
+nav a{
+    float:left;
+    display:block;
+    color:white;
+    text-align:center;
+    padding:12px 14px;
+    text-decoration:none;
+    font-family:Arial, sans-serif;
+}
+
+nav a:hover{
+    background-color:#e3ffd7;
+    color:hsl(155, 43%, 18%);
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* LEFT SIDE */
+
+.left-panel{
+    width:60%;
+    background: rgba(39,92,55,0.95);
+        
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+}
+
+.left-panel h1{
+    font-size:120px;
+    margin:0;
+
+    opacity:0.15;
+    letter-spacing:10px;
+}
+
+.left-panel p{
+    font-size:28px;
+    margin-top:10px;
+
+    opacity:0.8;
+}
+
+/* RIGHT SIDE */
+
+#login{
+    width:40%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:50px;
+
+    background:white;
+}
+
+#login h1{
+    color:hsl(155,43%,18%);
+    margin-bottom:30px;
+}
+
+#login input[type="text"],
+#login input[type="email"],
+#login input[type="password"]{
+
+    width:90%;
+    padding:14px;
+
+    border:1px solid #ddd;
+    border-radius:10px;
+
+    margin-bottom:15px;
+
+    font-size:16px;
+}
+
+#login input[type="submit"]{
+
+    width:95%;
+    padding:14px;
+
+    background:hsl(155,43%,18%);
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+}
+
+#login input[type="submit"]:hover{
+    background:#3abe02;
+}
+
+#login a{
+    text-decoration:none;
+}
+
+#login h5{
+    color:hsl(155,43%,18%);
+}

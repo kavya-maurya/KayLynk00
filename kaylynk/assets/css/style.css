@@ -1,0 +1,190 @@
+
+    nav {
+        background-color:   hsla(155, 43%, 18%, 0.601);
+        overflow: hidden;
+        position : sticky;
+        top: 0;
+
+    }
+
+    nav a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 12px 14px;
+        text-decoration: none;
+        font-family:arial, sans-serif;
+        
+    }
+
+    nav a:hover {
+        background-color: #e3ffd7;
+        color: hsl(155, 43%, 18%);
+    }
+
+    .hero {
+        background-image: url('herosec.png');
+        background-size: cover;
+        text-align: center;
+        height: 600px;
+        width: 100%;
+        padding-bottom: 20px;
+        border-radius: 0px 0px 28px 28px;
+
+    }
+
+       .project a{
+        
+            text-decoration: none;
+        }
+    
+
+    .project h1 {
+        display:inline-block;
+        font-family:serif;
+        font-size: 40px;
+        color: hsl(96, 44%, 43%);
+        
+        
+    }
+
+    .explore div
+
+       {
+        float: right;
+        display:inline;
+    
+        
+        width: 250px;
+        font-size :18px;;
+        background-color: hsla(155, 43%, 18%, 0.991);
+        text-align: center;
+            transition: transform 0.3s ease;
+        box-shadow: 0 6px 10px rgba(4, 41, 15, 0.706);
+        border-radius: 28px 0px 0px 28px;
+        border-right: 6px solid #3abe02; 
+        color:#e3ffd7;
+        font-family:monospace;
+        padding-top:4px;
+        justify-content: center;
+        margin-top: 20px;
+         margin-bottom: 20px;
+
+        
+        }
+
+        .explore div:hover {
+            transform: scale(1.05);
+        }
+
+       
+
+  
+    #projects {
+        display:block;
+    }
+
+    
+
+    #projects div {
+        display: inline-block;
+        width: 32%;  
+        background-color:#e5e6e4;
+        box-sizing: border-box;
+        padding:7px;
+        margin:10px;
+         transition: transform 0.3s ease;
+        box-shadow: 0 6px 10px rgba(37, 100, 56, 0.706);
+         animation: slideIn 1s ease forwards;
+
+          opacity: 0;
+    }
+
+    /*applying transition to project div*/
+    #projects div:hover {
+        transform: scale(1.05);
+      
+    }
+
+
+    @keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100px) translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
+
+
+   
+
+     /*applying transition to project div while div appears on screen on loading*/
+    
+
+    #projects div h1{
+        font-family:arial, sans-serif;
+        color: hsl(155, 43%, 18%);
+        border-left:5px #3abe02 solid;
+        padding-left: 8px;
+    }
+
+    #projects div p{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: hsl(155, 43%, 18%);
+        padding-left: 8px;
+    }
+
+    #about{
+        color:aliceblue;
+        background-color: rgba(39, 92, 55, 0.87);
+        margin: 20px;
+        padding: 20px;
+        border-radius: 0px 0px 28px 28px ;
+        box-shadow: 0 6px 10px rgba(37, 100, 56, 0.706);
+    }
+
+     #about h1{
+       
+        font-size: 40px;
+        color: hsl(120, 18%, 85%);
+       
+ text-align: left;
+    margin-bottom: 20px;
+    margin-top: 0;
+       
+
+       
+    }
+   
+     #about p{
+            margin:2px;
+            text-align: center;
+        font-size: 22px;
+        color:#abb6a7;
+        font-weight: 20;
+        font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+   
+    #projects img{
+
+    
+      display:inline-block;
+      border:#3abe02 solid 4px;
+     width: 100%;
+            height: 180px;
+            object-fit: cover;
+        border-radius: 28px;
+
+    }
+
+    
+    
+
+    
+    

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+   <link rel="stylesheet" href="css/styleRegister.css">
+   
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="loginn.html">Login</a>
+        <a href="registeration.html">Register</a>
+    </nav>
+       
+ 
+   <div class="container">
+
+    <div class="left-panel">
+        <h1>KayLynk</h1>
+        <p>Growing Ideas Into Digital Solutions</p>
+    </div>
+
+
+    <div id="login">
+         <h1>REGISTER</h1>
+<input type="text" id="name" placeholder="full name                                                            👤" ></input>
+<br>
+<br>
+      
+        <input type="email" placeholder="email                                                                  📧" id="email"></input>
+
+<br>
+<br>
+       
+
+                <input type="password" placeholder="password                                                           🔒" id="password"></input>
+        <br>        
+<br>
+			<input type="text"id="pn" placeholder="phone number                                                    📞" ></input>
+
+<br>
+<br>
+
+        <input type="submit" value="register" onclick="submit()">
+        <a href="login.html"><h5>already a user?</h5></a>
+
+    </div>
+       
+</div>
+</body>
+
+<script>
+
+        
+		
+		function submit(){
+			const name=document.getElementById('name').value;
+		const email=document.getElementById('email').value;
+		const password=document.getElementById('password').value;
+		const pn=document.getElementById('pn').value;
+			 
+			const user={
+				name: name,
+    mobile: pn,
+    email: email,
+    password: password
+			}
+console.log(user);
+			fetch('https://wallmagin-1.onrender.com/auth/register',{
+				method:'POST',
+				headers:{
+					'Content-Type':'application/json'
+				},
+				body:JSON.stringify(user)
+			}).then(response=>response.json)
+        .then(data=>{
+            console.log(data);
+             alert("your form has been submitted");
+        }).catch(err=>{
+            console.error('Error:', err);
+        })
+		
+	//to redirect to askai page after registration
+		setTimeout(function(){
+			window.location.href = "index.html";		
+		}
+
+		,2000);
+	}
+	
+		
+
+    </script>
+
+
+</html>

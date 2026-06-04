@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styleLogin.css">
+
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+    </nav>
+      <div class="container">
+
+    <div class="left-panel">
+        <h1>KayLynk</h1>
+        <p>Growing Ideas Into Digital Solutions</p>
+    </div>
+   
+    <div id="login">
+         <h1>LOGIN </h1>
+    
+        <input type="email" placeholder="email "id="userid"></input>
+
+<br>
+<br>
+          
+        <input type="password" placeholder="password" id="password">
+<br>
+<br>
+<br>
+<br>
+
+        <input type="submit" value="Login" onclick="submit()">
+       <a href="register.html"> <h5>create account?</h5></a>
+
+    </div>
+    
+</body>
+
+<script>
+
+ function submit(){
+             const pw= document.getElementById("password").value;
+        const userid= document.getElementById("userid").value;
+
+        const loginData={
+ email:     userid,
+    password: pw,
+        };
+
+        console.log(loginData);
+
+        fetch('https://wallmagin-1.onrender.com/auth/login',{
+            method:'post',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(loginData)
+        }).then(response=>response.json)
+        .then(data=>{
+            console.log(data);
+        }).catch(err=>{
+            console.error('Error:', err);
+        })
+                //to redirect to askai page after registration
+		setTimeout(function(){
+			window.location.href = "index.html";		
+		}
+
+		,2000);
+        }  
+
+</script>
+
+</html>
